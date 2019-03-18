@@ -2,7 +2,6 @@ package langdet
 
 import (
 	"bytes"
-	"fmt"
 	"sort"
 	"strings"
 	"unicode/utf8"
@@ -101,9 +100,8 @@ func generateNthGrams(resultMap map[string]int, text string, n int) {
 		}
 
 		resultMap[currentToken] += 1
-		if currentToken == "我" {
-			fmt.Println("currentToken", currentToken, resultMap[currentToken], text)
-		}
+
+		//fmt.Println("currentToken", currentToken, resultMap[currentToken], text)
 
 	}
 }
